@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Market Web Application</title>
+  <style>
+    /* Reset some default styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header styles */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #007bff;
+      padding: 10px 20px;
+    }
+
+    .logo img {
+      width: 120px;
+      height: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    /* Market Indices styles */
+    .market-indices {
+      margin-bottom: 30px;
+    }
+
+    .market-indices h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .index {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 10px;
+    }
+
+    .index h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .index .value {
+      font-size: 28px;
+      font-weight: bold;
+      color: #007bff;
+    }
+
+    .index .change {
+      color: #28a745;
+    }
+
+    /* User Info styles */
+    .user-info {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .user-info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .user-info p {
+      margin-bottom: 10px;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-right: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    /* Trending Stocks styles */
+    .trending-stocks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+    }
+
+    .trending-stocks h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .stock {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .stock img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .stock h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .stock .description {
+      color: #777;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #f0f0f0;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    footer ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    footer ul li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    footer ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Stock Market Web Application Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Stocks</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="market-indices">
+      <h2>Market Indices</h2>
+      <div class="index">
+        <h3>Nifty 50</h3>
+        <div class="value">14,600.00</div>
+        <div class="change">+0.50%</div>
+      </div>
+      <div class="index">
+        <h3>Sensex</h3>
+        <div class="value">48,000.00</div>
+        <div class="change">+0.40%</div>
+      </div>
+    </div>
+
+    <div class="user-info">
+      <h2>Welcome, John Doe</h2>
+      <p>Account Balance: $10,000</p>
+      <div class="cta-buttons">
+        <a href="#">Buy Stocks</a>
+        <a href="#">Sell Stocks</a>
+      </div>
+    </div>
+
+    <div class="trending-stocks">
+      <h2>Trending Stocks</h2>
+      <div class="stock">
+        <img src="stock1.png" alt="Stock 1">
+        <h3>Reliance Industries</h3>
+        <p class="description">One of the largest conglomerates in India.</p>
+      </div>
+      <div class="stock">
+        <img src="stock2.png" alt="Stock 2">
+        <h3>Tata Consultancy Services</h3>
+        <p class="description">IT services and consulting company.</p>
+      </div>
+      <div class="stock">
+        <img src="stock3.png" alt="Stock 3">
+        <h3>HDFC Bank</h3>
+        <p class="description">Leading private sector bank in India.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </footer>
+</body>
+
+</html>
